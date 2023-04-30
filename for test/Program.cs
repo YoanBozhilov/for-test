@@ -13,6 +13,7 @@ builder.Services.AddDbContext<SQLDbContext>(options =>
 });
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<EventService>();
+builder.Services.AddScoped<TicketService>();
 
 
 var app = builder.Build();

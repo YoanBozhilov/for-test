@@ -1,0 +1,37 @@
+﻿
+<h1>All Events</h1>
+
+<a asp-action="Create">
+    <button class="btn btn-primary">Create</button>
+</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Picture</th>
+            <th scope="col">PremiereDate</th>
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td><img src="@product.Picture" /></td>
+                <td>@product.PremiereDate</td>
+                <td>@product.Description</td>
+                <td><a href="@product.Link">@product.Link</a></td>
+                <td>
+                   <a asp-action="Edit" asp-route-id="@product.Id">
+                        <button class="btn btn-warning">Edit</button>
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@product.Id">
+                        <button class="btn btn-danger">Delete</button>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

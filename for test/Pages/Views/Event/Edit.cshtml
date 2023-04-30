@@ -1,0 +1,24 @@
+﻿
+
+<form asp-action="Edit" asp-route-id="@Model.Id">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Enter name" value="@Model.Name">
+    </div>
+    <div class="form-group">
+        <label>Picture</label>
+        <input type="text" class="form-control" name="picture" placeholder="Enter picture" value="@Model.Pic">
+    </div>
+        <div class="form-group">
+        <label>Description</label>
+        <input type="text" class="form-control" name="description" placeholder="Enter description" value="@Model.Description">
+    </div>
+    <div class="form-group">
+        <label>PremiereDate</label>
+        <input type="text" class="form-control" name="PremiereDate" placeholder="Enter PremiereDate" value="@Model.Link">
+    </div>
+    <button type="submit" class="btn btn-warning">Edit</button>
+    <a asp-action="Index">
+        <button type="button" class="btn btn-secondary">Cancel</button>
+    </a>
+</form>

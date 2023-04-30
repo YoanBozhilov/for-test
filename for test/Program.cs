@@ -9,7 +9,7 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<SQLDbContext>(options =>
 {
-    options.UseMySQL("Server=localhost;Database=info;Uid=root;Pwd=test;");
+    options.UseMySQL("Server=localhost;Database=test;Uid=root;Pwd=test;");
 });
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<EventService>();

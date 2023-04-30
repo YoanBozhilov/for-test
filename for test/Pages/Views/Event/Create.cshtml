@@ -1,4 +1,5 @@
-﻿<form asp-action="Create">
+﻿@model Event
+<form asp-action="Create">
     <div class="form-group">
         <label>Name</label>
         <input type="text" class="form-control" name="name" placeholder="Enter name">
@@ -7,13 +8,13 @@
         <label>Picture</label>
         <input type="text" class="form-control" name="pictire" placeholder="Enter picture">
     </div>
-        <div class="form-group">
+    <div class="form-group">
         <label>Description</label>
         <input type="text" class="form-control" name="description" placeholder="Enter description">
     </div>
     <div class="form-group">
         <label>PremiereDate</label>
-        <input type="text" class="form-control" name="PremiereDate" placeholder="Enter PremiereDate">
+        <input type="text" class="form-control" name="PremiereDate" placeholder="Enter premiereDate">
     </div>
     <button type="submit" class="btn btn-primary">Create</button>
     <a asp-action="Index">

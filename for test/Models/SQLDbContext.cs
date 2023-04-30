@@ -10,7 +10,7 @@ namespace for_test.Models
         }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<Tickets> Tickets { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Event> Events { get; set; }
 
     }

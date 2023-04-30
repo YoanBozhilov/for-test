@@ -1,4 +1,4 @@
-﻿
+﻿@model Event
 <form asp-action="DeleteConfirm" asp-route-id="@Model.Id">
     <div class="form-group">
         <label>Name</label>
@@ -14,7 +14,7 @@
     </div>
     <div class="form-group">
         <label>PremiereDate</label>
-        <input type="text" class="form-control" name="PremiereDate" placeholder="Enter PremiereDate" value="@Model.PremiereDate">
+        <input type="text" class="form-control" name="PremiereDate" placeholder="Enter premiereDate" value="@Model.PremiereDate">
     </div>
     <button type="submit" class="btn btn-danger">Delete</button>
     <a asp-action="Index">

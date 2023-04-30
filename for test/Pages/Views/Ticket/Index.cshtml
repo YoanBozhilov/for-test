@@ -1,4 +1,4 @@
-﻿@model List<EventDTO>
+﻿@model List<TicketDTO>
 <h1>All Events</h1>
 
 <a asp-action="Create">
@@ -9,9 +9,7 @@
     <thead>
         <tr>
             <th scope="col">Name</th>
-            <th scope="col">Picture</th>
-            <th scope="col">PremiereDate</th>
-            <th scope="col">Description</th>
+            <th scope="col">Price</th>
         </tr>
     </thead>
     <tbody>
@@ -19,11 +17,9 @@
         {
             <tr>
                 <td>@product.Name</td>
-                <td><img src="@product.Picture" /></td>
-                <td>@product.PremiereDate</td>
-                <td>@product.Description</td>
+                <td><img src="@product.Price" /></td>
                 <td>
-                   <a asp-action="Edit" asp-route-id="@product.Id">
+                    <a asp-action="Edit" asp-route-id="@product.Id">
                         <button class="btn btn-warning">Edit</button>
                     </a>
                     <a asp-action="Delete" asp-route-id="@product.Id">
